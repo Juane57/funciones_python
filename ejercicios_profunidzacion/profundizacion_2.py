@@ -36,13 +36,19 @@ en la lista pueden usar el método nativo de list "count"
 # --------------------------------
 # Aquí copiar la función "lista_aleatoria"
 # ya elaborada en el ejercicio anterior
-
+def lista_aleatoria(inicio, fin, cantidad):
+    lista=[]
+    for numero in range(cantidad):
+        numero = random.randint(inicio,fin)
+        lista.append(numero)
+    return lista
 
 # --------------------------------
 
 # --------------------------------
 # Aquí dentro definir la función contar
-
+def contar(numero,lista):
+    return lista.count(numero)
 
 # --------------------------------
 
@@ -52,18 +58,21 @@ if __name__ == '__main__':
     # Alumno: Utilizar la función "lista_aleatoria"
     # para que genere una lista de 5 números que esten comprendidos
     # entre los números 1 al 6 inclusive
+    
+    numero = 3 
 
-    # lista_numeros = lista_aleatoria(...)
+    lista_numeros = lista_aleatoria(1,6,5)
 
     # Imprimir en pantalla "lista_numeros" que tendrá
     # los valores retornado por la función "lista_aleatoria":
 
-    # print(lista_numeros)
+    print(lista_numeros)
 
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # en la lista aleatoria creada
-    # cantidad_tres = contar(lista_numeros, 3)
+    
+    cantidad_tres = contar(3,lista_numeros)
 
-    # print(cantidad_tres)
+    print(cantidad_tres)
 
     print("terminamos")
